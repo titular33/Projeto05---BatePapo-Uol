@@ -31,7 +31,7 @@ call()
 setInterval(call, 3000);
 
 function call() {
-    const promessa = axios.get();
+    const promessa = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages");
     promessa.then(chargeMessages);
 }
 
