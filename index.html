@@ -16,13 +16,13 @@
 
 <body>
 
-  <div class="top">
+  <header class="top">
     <img src="img/logo 1.png" alt="logo do chat" />
-    <div class="button" onclick="participants()">
+    <div class="button" onclick="participants(100)">
       <ion-icon name="people"></ion-icon>
-    </div>
+    </header>
   </div>
-  <div class="messages">
+  <div class="messages" data-identifier="message">
 
   </div>
 
@@ -60,10 +60,10 @@
       </div>
     </div>
   </div>
-  <div class="baseboard">
+  <footer class="baseboard">
     <input type="text" class="areaMessage" placeholder="Escreva aqui..." placeholder.color="black">
-    <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
-  </div>
+    <ion-icon name="paper-plane-outline" data-identifier="send-message" onclick="sendMessage()"></ion-icon>
+  </footer>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/js/script.js"></script>

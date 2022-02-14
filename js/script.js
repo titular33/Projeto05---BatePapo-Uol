@@ -2,7 +2,7 @@ let nome;
 safeName();
 
 function safeName() {
-    nome = prompt("Dgite seu nome");
+    nome = prompt("Digite seu nome");
     let nomeDado = {
         name: nome
     };
@@ -85,7 +85,6 @@ function sendMessage() {
     function sucess() {
         const promessa = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages");
         promessa.then(chargeMessages);
-
     }
 
     function failed() {
@@ -98,12 +97,13 @@ function sendMessage() {
 function participants() {
     const buttonParticipants = document.querySelector(".top .button");
     const show = document.querySelector(".mask");
-    show.classList.remove("hidden");
+    show.classList.toggle("hidden");
     console.log(buttonParticipants);
+    
 }
 
-function back() {
-    const buttonback = document.querySelector(".mask");
-    buttonback.classList.add("hidden");
+function back(){
+   const buttonback = document.querySelector(".mask");
+    buttonback.classList.toggle("hidden");
     console.log(buttonback);
 }
